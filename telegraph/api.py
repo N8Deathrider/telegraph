@@ -262,5 +262,5 @@ class Telegraph:
         data = self._request('getViews', **params)
         return PageViews(**data)
 
-    def close(self):
+    def close(self) -> None:
         self.session.close()
