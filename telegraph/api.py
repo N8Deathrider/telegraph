@@ -35,7 +35,7 @@ class Telegraph:
             raise TelegraphException(f'API Error: {response["error"]}')
         return response.get('result')
 
-    def create_account(self, short_name, author_name=None, author_url=None, use=True):
+    def create_account(self, short_name, author_name=None, author_url=None, use=True) -> Account:
         """
         Use this method to create a new Telegraph account.
 
@@ -212,7 +212,7 @@ class Telegraph:
 
     def get_page_list(self,
                       offset: int = 0,
-                      limit: int = 50):
+                      limit: int = 50) -> PageList:
         """
         Use this method to get a list of pages belonging to a Telegraph account.
 
